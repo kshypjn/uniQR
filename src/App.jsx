@@ -227,7 +227,7 @@ const QRCodeGenerator = () => {
   };
   
   return (
-    <>
+    <div className="bg-gray-100 min-h-screen">
       <Card className="w-full max-w-md mx-auto bg-white shadow-md rounded-lg my-8">
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold text-center">Ashoka Club QR Code</CardTitle>
@@ -311,10 +311,10 @@ const QRCodeGenerator = () => {
           <canvas ref={canvasRef} style={{ display: 'none' }} />
         </CardContent>
       </Card>
-      <footer className="mt-8 text-center text-sm text-gray-500">
+      <footer className="mt-8 text-center text-sm text-black">
         Made with <span role="img" aria-label="sparkle">✨</span> by <a href="https://instagram.com/sportlight.fun" className="no-underline italic text-orange-500" target="_blank" rel="noopener noreferrer">sportlight</a>
       </footer>
-    </>
+    </div>
   );
 };
 
