@@ -1,10 +1,6 @@
 import { useState, useRef } from 'react';
-// import { Command } from "cmdk";
 import { ChevronDown } from "lucide-react";
-// import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-// import { Command as CommandPrimitive } from "cmdk";
-// import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import QRCode from 'qrcode';
@@ -230,92 +226,95 @@ const QRCodeGenerator = () => {
     }
   };
   
-  
-
   return (
-    <Card className="w-full max-w-md mx-auto bg-white shadow-md rounded-lg my-8">
-      <CardHeader className="pb-2">
-        <CardTitle className="text-2xl font-bold text-center">Ashoka Club QR Code</CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-6 px-6 py-4">
-        <div className="flex flex-col space-y-4">
-          <Input
-            type="text"
-            placeholder="Enter URL"
-            value={url}
-            onChange={handleUrlChange}
-            className="p-3 border border-gray-300 rounded-lg"
-          />
-          <div className="relative">
-            <select
-              value={selectedClub ? selectedClub.name : ''}
-              onChange={handleClubChange}
-              className="w-full p-3 border border-gray-300 rounded-lg appearance-none bg-white"
+    <>
+      <Card className="w-full max-w-md mx-auto bg-white shadow-md rounded-lg my-8">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-2xl font-bold text-center">Ashoka Club QR Code</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-6 px-6 py-4">
+          <div className="flex flex-col space-y-4">
+            <Input
+              type="text"
+              placeholder="Enter URL"
+              value={url}
+              onChange={handleUrlChange}
+              className="p-3 border border-gray-300 rounded-lg"
+            />
+            <div className="relative">
+              <select
+                value={selectedClub ? selectedClub.name : ''}
+                onChange={handleClubChange}
+                className="w-full p-3 border border-gray-300 rounded-lg appearance-none bg-white"
+              >
+                <option value="">Select a club or society</option>
+                {clubsAndSocieties.map((club) => (
+                  <option key={club.name} value={club.name}>
+                    {club.name}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none" />
+            </div>
+            <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+              <div className="flex items-center justify-between sm:w-1/2">
+                <label htmlFor="qrColor" className="text-sm font-medium mr-2">QR Color:</label>
+                <Input
+                  type="color"
+                  id="qrColor"
+                  value={qrColor}
+                  onChange={handleForegroundColorChange}
+                  className="w-12 h-8 p-0 border-none"
+                />
+              </div>
+              <div className="flex items-center justify-between sm:w-1/2">
+                <label htmlFor="bgColor" className="text-sm font-medium mr-2">BG Color:</label>
+                <Input
+                  type="color"
+                  id="bgColor"
+                  value={bgColor}
+                  onChange={handleBackgroundColorChange}
+                  className="w-12 h-8 p-0 border-none"
+                />
+              </div>
+            </div>
+            <Button
+              onClick={generateCode}
+              className="w-full bg-blue-500 text-white py-3 px-4 rounded-lg hover:bg-blue-600 transition-colors"
             >
-              <option value="">Select a club or society</option>
-              {clubsAndSocieties.map((club) => (
-                <option key={club.name} value={club.name}>
-                  {club.name}
-                </option>
-              ))}
-            </select>
-            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none" />
+              Generate QR Code
+            </Button>
           </div>
-          <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-            <div className="flex items-center justify-between sm:w-1/2">
-              <label htmlFor="qrColor" className="text-sm font-medium mr-2">QR Color:</label>
-              <Input
-                type="color"
-                id="qrColor"
-                value={qrColor}
-                onChange={handleForegroundColorChange}
-                className="w-12 h-8 p-0 border-none"
-              />
-            </div>
-            <div className="flex items-center justify-between sm:w-1/2">
-              <label htmlFor="bgColor" className="text-sm font-medium mr-2">BG Color:</label>
-              <Input
-                type="color"
-                id="bgColor"
-                value={bgColor}
-                onChange={handleBackgroundColorChange}
-                className="w-12 h-8 p-0 border-none"
-              />
-            </div>
-          </div>
-          <Button
-            onClick={generateCode}
-            className="w-full bg-blue-500 text-white py-3 px-4 rounded-lg hover:bg-blue-600 transition-colors"
-          >
-            Generate QR Code
-          </Button>
-        </div>
 
-        {error && <p className="text-red-500 text-center text-sm">{error}</p>}
+          {error && <p className="text-red-500 text-center text-sm">{error}</p>}
 
-        {qrCode && (
-          <div className="space-y-4 mt-6">
-            <img src={qrCode} alt="Generated QR Code" className="mx-auto w-full max-w-xs rounded-lg shadow-md" />
-            <div className="flex space-x-2">
-              <Button
-                onClick={handleDownload}
-                className="w-1/2 bg-blue-500 text-white py-3 px-4 rounded-lg hover:bg-blue-600 transition-colors"
-              >
-                Download
-              </Button>
-              <Button
-                onClick={handleShare}
-                className="w-1/2 bg-green-500 text-white py-3 px-4 rounded-lg hover:bg-green-600 transition-colors"
-              >
-                WhatsApp
-              </Button>
+          {qrCode && (
+            <div className="space-y-4 mt-6">
+              <img src={qrCode} alt="Generated QR Code" className="mx-auto w-full max-w-xs rounded-lg shadow-md" />
+              <div className="flex space-x-2">
+                <Button
+                  onClick={handleDownload}
+                  className="w-1/2 bg-blue-500 text-white py-3 px-4 rounded-lg hover:bg-blue-600 transition-colors"
+                >
+                  Download
+                </Button>
+                <Button
+                  onClick={handleShare}
+                  className="w-1/2 bg-green-500 text-white py-3 px-4 rounded-lg hover:bg-green-600 transition-colors"
+                >
+                  WhatsApp
+                </Button>
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        <canvas ref={canvasRef} style={{ display: 'none' }} />
-      </CardContent>
-    </Card>
+          <canvas ref={canvasRef} style={{ display: 'none' }} />
+        </CardContent>
+      </Card>
+      <footer className="mt-8 text-center text-sm text-gray-500">
+        Made with <span role="img" aria-label="sparkle">✨</span> by <a href="https://instagram.com/sportlight.fun" className="no-underline italic text-orange-500" target="_blank" rel="noopener noreferrer">sportlight</a>
+      </footer>
+    </>
   );
 };
 
