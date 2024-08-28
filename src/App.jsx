@@ -209,11 +209,16 @@ const QRCodeGenerator = () => {
 
   const handleShare = () => {
     if (qrCode) {
-      const encodedImage = encodeURIComponent(qrCode);
-      const whatsappUrl = `https://wa.me/?text=${encodedImage}`;
+      const link = document.createElement('a');
+      link.href = qrCode;
+      link.download = 'qr_code.png';
+      link.click();
+  
+      const whatsappUrl = `https://wa.me/?text=Check out this QR code!`;
       window.open(whatsappUrl, '_blank');
     }
   };
+  
 
   return (
     <Card className="w-full max-w-md mx-auto bg-white shadow-md rounded-lg my-8">
