@@ -207,17 +207,29 @@ const QRCodeGenerator = () => {
     }
   };
 
-  const handleShare = () => {
+  const handleShare = async () => {
     if (qrCode) {
-      const link = document.createElement('a');
-      link.href = qrCode;
-      link.download = 'qr_code.png';
-      link.click();
+      // Convert base64 image to Blob
+      const response = await fetch(qrCode);
+      const blob = await response.blob();
+      const file = new File([blob], 'qr_code.png', { type: 'image/png' });
   
-      const whatsappUrl = `https://wa.me/?text=Check out this QR code!`;
-      window.open(whatsappUrl, '_blank');
+      // Check if Web Share API is supported
+      if (navigator.share) {
+        navigator
+          .share({
+            title: 'QR Code',
+            text: 'Check out this QR code:',
+            files: [file], // This is where you include the image file
+          })
+          .then(() => console.log('Successfully shared'))
+          .catch((error) => console.error('Error sharing', error));
+      } else {
+        alert('Web Share API is not supported in your browser. Please share manually.');
+      }
     }
   };
+  
   
 
   return (
