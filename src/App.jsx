@@ -227,7 +227,7 @@ const QRCodeGenerator = () => {
   };
   
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div>
       <Card className="w-full max-w-md mx-auto bg-white shadow-md rounded-lg my-8">
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold text-center">Ashoka Club QR Code</CardTitle>
