@@ -15,6 +15,7 @@ import ausdg from './assets/ausdg.png';
 import batter from './assets/batter.jpg';
 import cap from './assets/cap.jpg';
 import eeshto from './assets/eeshto.jpg';
+import edict from './assets/edict.png'
 import enactus from './assets/enactus.png';
 import farm from './assets/farm.png';
 import fc from './assets/fc.png';
@@ -62,6 +63,7 @@ const clubsAndSocieties = [
   { name: "Caperture", logo: cap },
   { name: "Computer Science Society", logo: cssoc },
   { name: "Economics Society", logo: eco },
+  { name: "Edict", logo: edict },
   { name: "Eeshto", logo: eeshto },
   { name: "Enactus Ashoka", logo: enactus },
   { name: "Epigraph", logo: epigraph },
