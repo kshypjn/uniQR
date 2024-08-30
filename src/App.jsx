@@ -63,7 +63,7 @@ const clubsAndSocieties = [
   { name: "AUSDG", logo: ausdg },
   { name: "Caperture", logo: cap },
   { name: "Computer Science Society", logo: cssoc },
-  { name: "Cycle", logo: cycle },
+  { name: "Cycling Club", logo: cycle },
   { name: "Economics Society", logo: eco },
   { name: "Edict", logo: edict },
   { name: "Eeshto", logo: eeshto },
