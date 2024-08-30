@@ -49,6 +49,7 @@ import astro from './assets/astro.jpg';
 import phys from './assets/phys.jpg';
 import wics from './assets/wics.jpg';
 import cssoc from './assets/cssoc.jpg';
+import cycle from './assets/cycle.jpg';
 import { Analytics } from "@vercel/analytics/react"
 const clubsAndSocieties = [
   { name: "Abhinaya", logo: abhinaya },
@@ -62,6 +63,7 @@ const clubsAndSocieties = [
   { name: "AUSDG", logo: ausdg },
   { name: "Caperture", logo: cap },
   { name: "Computer Science Society", logo: cssoc },
+  { name: "Cycle", logo: cycle },
   { name: "Economics Society", logo: eco },
   { name: "Edict", logo: edict },
   { name: "Eeshto", logo: eeshto },
