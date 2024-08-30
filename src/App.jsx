@@ -81,7 +81,7 @@ const clubsAndSocieties = [
   { name: "HerCampus AU", logo: hcau },
   { name: "Hindvi", logo: hindvi },
   { name: "IEEE Ashoka", logo: ieee },
-  {name : "India Studies", logo: asia}
+  {name : "India Studies", logo: asia},
   { name: "Kalinga", logo: kalinga },
   { name: "Khayal", logo: khayal_logo },
   { name: "Kintsugi", logo: kintsugi },
