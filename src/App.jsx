@@ -48,6 +48,7 @@ import psych from './assets/psych.jpg';
 import astro from './assets/astro.jpg';
 import phys from './assets/phys.jpg';
 import wics from './assets/wics.jpg';
+import law from './assets/law.jpg';
 import cssoc from './assets/cssoc.jpg';
 import cycle from './assets/cycle.jpg';
 import { Analytics } from "@vercel/analytics/react"
@@ -79,6 +80,7 @@ const clubsAndSocieties = [
   { name: "Khayal", logo: khayal_logo },
   { name: "Kintsugi", logo: kintsugi },
   { name: "LangUp", logo: langup },
+  { name: "Law Society", logo: law },
   { name: "Mad Batter", logo: batter },
   { name: "Neev", logo: neev },
   { name: "Northeast Collective", logo: nc },
