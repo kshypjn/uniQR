@@ -10,9 +10,11 @@ import adc from './assets/adc.png';
 import adu from './assets/adu.png';
 import aic from './assets/aic.png';
 import anime from './assets/anime.png';
+import asia from './assets/india_studies.jpeg';
 import auqc from './assets/auqc.png';
 import ausdg from './assets/ausdg.png';
 import batter from './assets/batter.jpg';
+import bioSoc from './assets/biosoc.jpg'
 import cap from './assets/cap.jpg';
 import eeshto from './assets/eeshto.jpg';
 import edict from './assets/edict.png'
@@ -51,6 +53,7 @@ import wics from './assets/wics.jpg';
 import law from './assets/law.jpg';
 import cssoc from './assets/cssoc.jpg';
 import cycle from './assets/cycle.jpg';
+import bio_journal from './assets/bioJournal.jpg'
 import { Analytics } from "@vercel/analytics/react"
 const clubsAndSocieties = [
   { name: "Abhinaya", logo: abhinaya },
@@ -62,6 +65,8 @@ const clubsAndSocieties = [
   { name: "Astronomy Club", logo: astro },
   { name: "AUQC", logo: auqc },
   { name: "AUSDG", logo: ausdg },
+  { name: "Biology Journal", logo: bio_journal},
+  { name: "Biology Society", logo: bioSoc },
   { name: "Caperture", logo: cap },
   { name: "Computer Science Society", logo: cssoc },
   { name: "Cycling Club", logo: cycle },
@@ -76,6 +81,7 @@ const clubsAndSocieties = [
   { name: "HerCampus AU", logo: hcau },
   { name: "Hindvi", logo: hindvi },
   { name: "IEEE Ashoka", logo: ieee },
+  {name : "India Studies", logo: asia}
   { name: "Kalinga", logo: kalinga },
   { name: "Khayal", logo: khayal_logo },
   { name: "Kintsugi", logo: kintsugi },
