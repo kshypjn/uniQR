@@ -49,7 +49,7 @@ import astro from './assets/astro.jpg';
 import phys from './assets/phys.jpg';
 import wics from './assets/wics.jpg';
 import cssoc from './assets/cssoc.jpg';
-
+import { Analytics } from "@vercel/analytics/react"
 const clubsAndSocieties = [
   { name: "Abhinaya", logo: abhinaya },
   { name: "Anime Club", logo: anime },
@@ -230,6 +230,7 @@ const QRCodeGenerator = () => {
   
   return (
     <div>
+      <Analytics></Analytics>
       <Card className="w-full max-w-md mx-auto bg-white shadow-md rounded-lg my-8">
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold text-center">Ashoka Club QR Code</CardTitle>
