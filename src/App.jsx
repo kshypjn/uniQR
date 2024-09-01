@@ -8,7 +8,7 @@ import abhinaya from './assets/abhinaya.jpg';
 import navr from './assets/navrang.png';
 import acc from './assets/ACC.png';
 import adc from './assets/adc.png';
-import phil from './assets/phik.jpg';
+import phil from './assets/phik.jpeg';
 import adu from './assets/adu.png';
 import aic from './assets/aic.png';
 import anime from './assets/anime.png';
