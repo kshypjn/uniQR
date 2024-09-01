@@ -8,6 +8,7 @@ import abhinaya from './assets/abhinaya.jpg';
 import navr from './assets/navrang.png';
 import acc from './assets/ACC.png';
 import adc from './assets/adc.png';
+import phil from './assets/phik.jpg';
 import adu from './assets/adu.png';
 import aic from './assets/aic.png';
 import anime from './assets/anime.png';
@@ -94,6 +95,7 @@ const clubsAndSocieties = [
   { name: "Northeast Collective", logo: nc },
   { name: "Orators Club", logo: orators },
   { name: "Pawsitive", logo: paws },
+  { name: "Philosophy Society", logo: phil },
   { name: "Physics Society", logo: phys },
   { name: "Psychology Society", logo: psych },
   { name: "Quiz Club", logo: quiz },
