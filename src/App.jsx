@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import QRCode from 'qrcode';
 import abhinaya from './assets/abhinaya.jpg';
+import navr from './assets/navrang.png';
 import acc from './assets/ACC.png';
 import adc from './assets/adc.png';
 import adu from './assets/adu.png';
@@ -88,6 +89,7 @@ const clubsAndSocieties = [
   { name: "LangUp", logo: langup },
   { name: "Law Society", logo: law },
   { name: "Mad Batter", logo: batter },
+  { name: "Navrang", logo: navr },
   { name: "Neev", logo: neev },
   { name: "Northeast Collective", logo: nc },
   { name: "Orators Club", logo: orators },
