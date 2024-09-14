@@ -11,6 +11,7 @@ import adc from './assets/adc.png';
 import phil from './assets/phik.jpeg';
 import adu from './assets/adu.png';
 import aic from './assets/aic.png';
+import antro from './assets/as.jpeg'
 import anime from './assets/anime.png';
 import asia from './assets/india_studies.jpeg';
 import auqc from './assets/auqc.png';
@@ -60,6 +61,7 @@ import { Analytics } from "@vercel/analytics/react"
 const clubsAndSocieties = [
   { name: "Abhinaya", logo: abhinaya },
   { name: "Anime Club", logo: anime },
+  { name: "Anthropology Society", logo: antro },
   { name: "Art and Design Collective", logo: adc },
   { name: "Ashoka Consulting Club", logo: acc },
   { name: "Ashoka Debating Union", logo: adu },
