@@ -46,6 +46,7 @@ import tcr from './assets/tcr.png';
 import tgr from './assets/tgr.png';
 import vistaar from './assets/vistaar.jpg';
 import war from './assets/war.jpg';
+import pix from './assets/pix.png';
 import wif from './assets/wif.jpg';
 import eco from './assets/eco.jpg';
 import epigraph from './assets/epigraph.jpg';
@@ -99,6 +100,7 @@ const clubsAndSocieties = [
   { name: "Pawsitive", logo: paws },
   { name: "Philosophy Society", logo: phil },
   { name: "Physics Society", logo: phys },
+  {name : "Pixel", logo: pix},
   { name: "Psychology Society", logo: psych },
   { name: "Quiz Club", logo: quiz },
   { name: "RAAH", logo: raah },
