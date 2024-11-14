@@ -58,6 +58,7 @@ import law from './assets/law.jpg';
 import cssoc from './assets/cssoc.jpg';
 import cycle from './assets/cycle.jpg';
 import bio_journal from './assets/bioJournal.jpg'
+import coda from './assets/coda.jpeg'
 import { Analytics } from "@vercel/analytics/react"
 const clubsAndSocieties = [
   { name: "Abhinaya", logo: abhinaya },
@@ -74,6 +75,7 @@ const clubsAndSocieties = [
   { name: "Biology Society", logo: bioSoc },
   { name: "Caperture", logo: cap },
   { name: "Computer Science Society", logo: cssoc },
+  { name: "CODA", logo: coda },
   { name: "Cycling Club", logo: cycle },
   { name: "Economics Society", logo: eco },
   { name: "Edict", logo: edict },
