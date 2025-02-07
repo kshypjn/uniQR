@@ -56,6 +56,7 @@ import phys from './assets/phys.jpg';
 import wics from './assets/wics.jpg';
 import law from './assets/law.jpg';
 import cssoc from './assets/cssoc.jpg';
+import chimera from './assets/chimeralogo.png'
 import cycle from './assets/cycle.jpg';
 import bio_journal from './assets/bioJournal.jpg'
 import coda from './assets/coda.jpeg'
@@ -74,6 +75,7 @@ const clubsAndSocieties = [
   { name: "Biology Journal", logo: bio_journal},
   { name: "Biology Society", logo: bioSoc },
   { name: "Caperture", logo: cap },
+  { name: "Chimera", logo: chimera },
   { name: "Computer Science Society", logo: cssoc },
   { name: "CODA", logo: coda },
   { name: "Cycling Club", logo: cycle },
